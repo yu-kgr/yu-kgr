@@ -1,9 +1,7 @@
 'use strict';
-const path = require('path');
 const {h, Text} = require('ink');
 const SelectInput = require('ink-select-input');
 const opn = require('opn');
-const terminalImage = require('terminal-image');
 
 const open = url => opn(url, {wait: false});
 
@@ -46,7 +44,7 @@ module.exports = () => (
 	<div>
 		<br/>
 		<div>
-			<Text>I'm aiming UX engineer. 🍣 I like to think about what is the essential problem of things. The remark content is personal opinion.</Text>
+			<Text>I am aiming UX engineer🍣<br/>I like to think about what is the essential problem of things.<br/>The remark content is personal opinion.</Text>
 		</div>
 		<br/>
 		<SelectInput items={items} onSelect={handleSelect}/>
