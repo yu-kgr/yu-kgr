@@ -32,6 +32,10 @@ const items = [
 		label: 'Facebook',
 		url: 'https://www.facebook.com/yk.kgr'
 	},
+  {
+    label: 'Ask questions anonymously',
+    url: 'https://peing.net/ja/yu_kgr'
+  },
 	{
 		label: 'Quit',
 		action() {
