@@ -1,13 +1,13 @@
 {
 	"name": "yu-kgr",
-	"version": "1.0.0",
-	"description": "The yu-kgr CLI",
+	"version": "1.0.1",
+	"description": "The Minakawa Yuki（@yu-kgr）CLI",
 	"license": "MIT",
 	"repository": "yu-kgr/yu-kgr",
 	"author": {
 		"name": "yu-kgr",
 		"email": "kgr.ze21ro@gmail.com",
-		"url": "kglabo.com"
+		"url": "https://blog.kglabo.com"
 	},
 	"bin": {
 		"yu-kgr": "source/cli.js"

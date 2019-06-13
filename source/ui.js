@@ -18,8 +18,12 @@ const handleSelect = item => {
 const items = [
 	{
 		label: 'Blog',
-		url: 'https://kglabo.com'
+		url: 'https://blog.kglabo.com'
 	},
+  {
+    label: 'Podcast',
+    url: 'https://podcast.kglabo.com'
+  },
 	{
 		label: 'GitHub',
 		url: 'https://github.com/yu-kgr'
@@ -32,10 +36,7 @@ const items = [
 		label: 'Facebook',
 		url: 'https://www.facebook.com/yk.kgr'
 	},
-  {
-    label: 'Ask questions anonymously',
-    url: 'https://peing.net/ja/yu_kgr'
-  },
+
 	{
 		label: 'Quit',
 		action() {
@@ -48,7 +49,7 @@ module.exports = () => (
 	<div>
 		<br/>
 		<div>
-			<Text>I am aiming UX engineer🍣<br/>I like to think about what is the essential problem of things.<br/>The remark content is personal opinion.</Text>
+			<Text>Hi. i'm Web Developer.<br/>I want to bring smiles to people through my technology.</Text>
 		</div>
 		<br/>
 		<SelectInput items={items} onSelect={handleSelect}/>
