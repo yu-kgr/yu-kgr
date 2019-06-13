@@ -1,9 +1,10 @@
 'use strict';
-const {h, Text} = require('ink');
-const SelectInput = require('ink-select-input');
-const opn = require('opn');
-
-const open = url => opn(url, {wait: false});
+const path = require('path');
+const React = require('react');
+const {Box, Text} = require('ink');
+const SelectInput = require('ink-select-input').default;
+const open = require('open');
+const terminalImage = require('terminal-image');
 
 const handleSelect = item => {
 	if (item.url) {
@@ -15,7 +16,15 @@ const handleSelect = item => {
 	}
 };
 
-const items = [
+const createItems = items => {
+	for (const item of items) {
+		item.key = item.url || item.label;
+	}
+
+	return items;
+};
+
+const items = createItems([
 	{
 		label: 'Blog',
 		url: 'https://blog.kglabo.com'
@@ -23,7 +32,11 @@ const items = [
   {
     label: 'Podcast',
     url: 'https://podcast.kglabo.com'
-  },
+	},
+  {
+    label: 'Set of Skills',
+    url: 'https://www.resume.id/yu_kgr'
+	},
 	{
 		label: 'GitHub',
 		url: 'https://github.com/yu-kgr'
@@ -43,15 +56,15 @@ const items = [
 			process.exit(); // eslint-disable-line unicorn/no-process-exit
 		}
 	}
-];
+]);
 
 module.exports = () => (
-	<div>
-		<br/>
-		<div>
-			<Text>Hi. i'm Web Developer.<br/>I want to bring smiles to people through my technology.</Text>
-		</div>
-		<br/>
+	<Box flexDirection="column">
+		<Box marginBottom={1}>
+			<Text>
+					Hi. i'm web developer. I want to bring smiles to people through my technology.
+			</Text>
+		</Box>
 		<SelectInput items={items} onSelect={handleSelect}/>
-	</div>
+	</Box>
 );

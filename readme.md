@@ -1,4 +1,4 @@
-> The [yu-kgr](https://kglabo.com) CLI
+> The [yu-kgr](https://blog.kglabo.com) CLI
 
 <img src="screenshot.png" width="752">
 
